@@ -20,7 +20,7 @@ class IndexController extends Zend_Controller_Action
 
 	public function langAction()
 	{
-		$lang = $this->getRequest()->getParam('lang', 'en_US');
+		$lang = $this->getRequest()->getParam('lang', 'en');
 		$bootstrap = $this->getInvokeArg('bootstrap');
 		$bootstrap->bootstrap('translate');
 		$translate = $bootstrap->getResource('translate');

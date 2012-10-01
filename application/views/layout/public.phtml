@@ -72,7 +72,7 @@ echo $this->doctype() ?>
 						<li>
 							<form action="#" id="language-form" method="get">
 								<select name="lang" onchange="$('#language-form').submit()">
-									<option value="en_US"<?php echo ($translate->getLocale() == 'en_US' ? ' selected="selected"' : ''); ?>><?php echo $translate->_("English (US)"); ?></option>
+									<option value="en"<?php echo ($translate->getLocale() == 'en' ? ' selected="selected"' : ''); ?>><?php echo $translate->_("English (US)"); ?></option>
 									<option value="fr"<?php echo ($translate->getLocale() == 'fr' ? ' selected="selected"' : ''); ?>><?php echo $translate->_("French"); ?></option>
 								</select>
 							</form>
