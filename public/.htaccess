@@ -7,3 +7,6 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteBase /er>/zf
 RewriteRule ^.*$ - [NC,L]
 RewriteRule ^.*$ index.php [NC,L]
+
+SetEnv APPLICATION_ENV development
+#SetEnv APPLICATION_ENV production
