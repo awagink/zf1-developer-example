@@ -28,4 +28,11 @@ class IndexController extends Zend_Controller_Action
 		Zend_Registry::set('Zend_Translate', $translate);
 		Zend_Registry::set('Zend_Locale', $lang);
 	}
+
+	public function clearAction()
+	{
+		Zend_Registry::set('Zend_Translate', null);
+		zend_Registry::set('Zend_Locale', null);
+		return $this->_helper->redirector('index', 'index', 'default');
+	}
 }

@@ -24,6 +24,25 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		return $session;
 	}
 
+	public function _initTranslations()
+	{
+		$translate = new Zend_Translate(array (
+			'adapter' => 'Array',
+			'content' => APPLICATION_PATH . '/../data/lang/en/common.php',
+			'locale' => 'en',
+		));
+
+		$translate->addTranslation(array (
+			'adapter' => 'Array',
+			'content' => APPLICATION_PATH . '/../data/lang/fr/common.php',
+			'locale' => 'fr',
+		));
+
+		Zend_Registry::set('Zend_Translate', $translate);
+
+		return $translate;
+	}
+
 	protected function _initViewHelpers()
 	{
 		$view = new Zend_View();
