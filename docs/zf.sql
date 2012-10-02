@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.1.54)
 # Database: zf
-# Generation Time: 2012-10-02 15:55:26 +0000
+# Generation Time: 2012-10-02 16:02:32 +0000
 # ************************************************************
 
 
@@ -68,6 +68,7 @@ CREATE TABLE `locales` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `locale` varchar(11) NOT NULL DEFAULT '',
   `title` varchar(64) DEFAULT NULL,
+  `active` tinyint(1) unsigned DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `locale` (`locale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -75,10 +76,10 @@ CREATE TABLE `locales` (
 LOCK TABLES `locales` WRITE;
 /*!40000 ALTER TABLE `locales` DISABLE KEYS */;
 
-INSERT INTO `locales` (`id`, `locale`, `title`)
+INSERT INTO `locales` (`id`, `locale`, `title`, `active`)
 VALUES
-	(1,'en','English (US)'),
-	(2,'fr','Français');
+	(1,'en','English (US)',1),
+	(2,'fr','Français',1);
 
 /*!40000 ALTER TABLE `locales` ENABLE KEYS */;
 UNLOCK TABLES;
